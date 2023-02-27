@@ -63,7 +63,7 @@ const gameStart = () => {
     let appleImage = document.createElement("img");
     appleImage.setAttribute("class", "appleImage");
     appleImage.setAttribute("src", "./apple.svg");
-    fruit.appendChild(appleImage);g
+    fruit.appendChild(appleImage);
     fruit.style.left = fruitLeft + "px";
 
     const fallDownFruits = () => {
