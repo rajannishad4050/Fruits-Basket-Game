@@ -88,7 +88,7 @@ const gameStart = () => {
         document.querySelector(".restart").style = "display: block";
       }
 
-      fruitBottom -= 3.5;
+      fruitBottom -= 3;
       fruit.style.bottom = fruitBottom + "px";
     };
 
@@ -99,7 +99,7 @@ const gameStart = () => {
 
   document.addEventListener("keydown", control);
 
-  game.addEventListener("click", gameStart);
+  reloadIcon.addEventListener("click", gameStart);
 };
 
 gameStart();
