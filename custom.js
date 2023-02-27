@@ -88,7 +88,7 @@ const gameStart = () => {
         document.querySelector(".restart").style = "display: block";
       }
 
-      fruitBottom -= 4;
+      fruitBottom -= 3.5;
       fruit.style.bottom = fruitBottom + "px";
     };
 
