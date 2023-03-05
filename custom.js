@@ -9,6 +9,7 @@ const gameStart = () => {
     window.getComputedStyle(basket).getPropertyValue("bottom")
   );
   const gameOverText = document.querySelector(".gameOver-text");
+  const restart = document.querySelector(".restart");
   const reloadIcon = document.querySelector(".reload");
   const scoreCount = document.querySelector(".score");
   const allFruits = document.querySelectorAll(".fruit");
@@ -19,7 +20,7 @@ const gameStart = () => {
 
   gameOverText.classList.add("hidden");
   reloadIcon.classList.add("hidden");
-  document.querySelector(".restart").style = "display: none";
+  restart.style = "display: none";
 
   let score = 0;
   let gameOver = false;
@@ -79,6 +80,7 @@ const gameStart = () => {
         if (gameOver === false) scoreCount.innerText = `score: ${score}`;
       }
       if (fruitBottom < basketBottom) {
+        fruitsParent.removeChild(fruit);
         clearInterval(fallingInterval);
         clearInterval(fruitTimeout);
         gameOverText.classList.remove("hidden");
